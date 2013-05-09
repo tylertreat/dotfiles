@@ -1,0 +1,8 @@
+*~
+.DS_Store
+org.eclipse.jdt.core.prefs
+org.moreunit.prefs
+.idea
+*.pyc
+*.class
+
