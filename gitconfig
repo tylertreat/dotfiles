@@ -1,0 +1,28 @@
+[user]
+	name = Tyler Treat
+	email = ttreat31@gmail.com
+
+[core]
+	excludesfile = /Users/Tyler/.gitignore_global
+
+[color]
+        diff = auto
+        status = auto
+	branch = auto
+
+[push]
+        default = tracking
+
+[merge]
+        tool = vimdiff
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[tig]
+	line-number-interval = 1
