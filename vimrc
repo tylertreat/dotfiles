@@ -12,6 +12,32 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Do not search pyc files.
+set wildignore+=*.pyc
+
+set ruler
+set showcmd
+
+set laststatus=2
+
+set hidden
+
+set backspace=2
+
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+
+set number
+
+let g:pymode_folding=0
+let g:pymode_lint_ignore = "W391"
+let g:pymode_lint = 0
+let g:pymode_lint_cwindow = 0
+let g:pymode_run = 0
+
 " Task lists
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
