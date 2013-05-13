@@ -65,6 +65,22 @@ map <leader>r :RopeRename<CR>
 " Searching
 nmap <leader>a <Esc>:Ack!
 
+" Setup some color stuff.
+set background=dark
+set t_Co=256
+colorscheme desert256
+
+set cursorline
+set colorcolumn=80
+
+hi Normal guibg=#cccccc ctermbg=234
+hi NonText guibg=#cccccc ctermbg=234
+
+" highlight groups
+hi CursorLine  cterm=NONE ctermbg=236
+hi CursorColumn  cterm=NONE ctermbg=236
+hi ColorColumn  cterm=NONE ctermbg=232
+
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
