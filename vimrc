@@ -15,6 +15,21 @@ map <c-h> <c-w>h
 " Do not search pyc files.
 set wildignore+=*.pyc
 
+set history=1000
+
+set mouse=a
+
+" Backup files
+set backup
+set backupdir=~/tmp/vim/backup//
+
+" Put undo files in a special safe place.
+set undofile
+set undodir=~/tmp/vim/undo//
+
+" Put swap files in a special place.
+set directory=~/tmp/vim/swap//
+
 set ruler
 set showcmd
 
