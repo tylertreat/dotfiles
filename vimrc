@@ -26,6 +26,9 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" Hitting esc sucks
+imap jj <Esc>
+
 " Do not search pyc files.
 set wildignore+=*.pyc
 
