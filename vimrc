@@ -74,10 +74,11 @@ let g:pymode_run = 0
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 
-" Syntax highlighting and validatin
+" Syntax highlighting and validation
 syntax on                    " syntax highlighing
 filetype on                  " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
+let g:pyflakes_use_quickfix = 0
 
 " PEP8
 let g:pep8_map='<leader>8'
