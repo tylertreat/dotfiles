@@ -88,8 +88,26 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
+" Rope AutoImport and OrganizeImport
+nnoremap <C-S-o> :RopeOrganizeImports<CR>0<CR><CR>
+nnoremap <C-S-i> :RopeAutoImport<CR>
+
+" Close tip window when a selection is made
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 " NERD Tree
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeWinSize = 22
+let NERDTreeMinimalUI = 1
+
+" Flake8 setup and shortcut
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=W391'
+nnoremap <leader>s :SyntasticCheck<CR>
+nnoremap zj :lnext<CR>zz
+nnoremap zk :lprev<CR>zz
 
 " Refactoring and go to definition
 map <leader>j :RopeGotoDefinition<CR>
