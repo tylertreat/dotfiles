@@ -1,6 +1,21 @@
+filetype on
 filetype off
-call pathogen#incubate()
+call pathogen#infect()
 call pathogen#helptags()
+
+" Add some stuff to the statusline
+set statusline=%t       "tail of the filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set statusline+=%{fugitive#statusline()}
 
 " Code folding
 set foldmethod=indent
@@ -11,6 +26,9 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Hitting esc sucks
+imap jj <Esc>
 
 " Do not search pyc files.
 set wildignore+=*.pyc
@@ -57,10 +75,11 @@ let g:pymode_run = 0
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
 
-" Syntax highlighting and validatin
+" Syntax highlighting and validation
 syntax on                    " syntax highlighing
 filetype on                  " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
+let g:pyflakes_use_quickfix = 0
 
 " PEP8
 let g:pep8_map='<leader>8'
@@ -70,8 +89,26 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
+" Rope AutoImport and OrganizeImport
+nnoremap <C-S-o> :RopeOrganizeImports<CR>0<CR><CR>
+nnoremap <C-S-i> :RopeAutoImport<CR>
+
+" Close tip window when a selection is made
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 " NERD Tree
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeWinSize = 22
+let NERDTreeMinimalUI = 1
+
+" Flake8 setup and shortcut
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=W391'
+nnoremap <leader>s :SyntasticCheck<CR>
+nnoremap zj :lnext<CR>zz
+nnoremap zk :lprev<CR>zz
 
 " Refactoring and go to definition
 map <leader>j :RopeGotoDefinition<CR>
