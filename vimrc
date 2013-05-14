@@ -30,6 +30,9 @@ map <c-h> <c-w>h
 " Hitting esc sucks
 imap jj <Esc>
 
+" Remap leader from \
+let mapleader = ","
+
 " Do not search pyc files.
 set wildignore+=*.pyc
 
