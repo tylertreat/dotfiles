@@ -84,6 +84,9 @@ filetype on                  " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 let g:pyflakes_use_quickfix = 0
 
+" Add some nifty name use highlighting
+" autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
 " PEP8
 let g:pep8_map='<leader>8'
 
@@ -120,7 +123,7 @@ map <leader>r :RopeRename<CR>
 " Searching
 nmap <leader>a <Esc>:Ack!
 
-" Setup some color stuff.
+" Setup some color stuff
 set background=dark
 set t_Co=256
 colorscheme desert256
