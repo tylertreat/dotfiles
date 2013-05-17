@@ -1,0 +1,19 @@
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Projects"
+alias wf="cd ~/WebFilings"
+alias g="git"
+alias h="history"
+alias v="vim"
+alias o="open"
+alias oo="open ."
+alias gae="cd /usr/local/google_appengine/"
