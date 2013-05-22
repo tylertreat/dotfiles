@@ -30,6 +30,9 @@ map <c-h> <c-w>h
 " Hitting esc sucks
 imap jj <Esc>
 
+" Enable paste toggling
+set pastetoggle=<F10>
+
 " Remap leader from \
 let mapleader = ","
 
