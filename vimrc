@@ -17,6 +17,8 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set statusline+=%{fugitive#statusline()}
 
+let g:airline_powerline_fonts = 1
+
 " Code folding
 set foldmethod=indent
 set foldlevel=99
