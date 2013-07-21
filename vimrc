@@ -73,11 +73,16 @@ set autoindent
 
 set number
 
+let g:pymode_rope = 1
 let g:pymode_folding=0
 let g:pymode_lint_ignore = "W391"
 let g:pymode_lint = 0
 let g:pymode_lint_cwindow = 0
 let g:pymode_run = 0
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_key = '<leader>b'
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
 
 " Task lists
 map <leader>td <Plug>TaskList
