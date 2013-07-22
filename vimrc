@@ -93,6 +93,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/powerline'
 Bundle 'sontek/rope-vim'
 Bundle 'ervandew/supertab'
+Bundle 'fholgado/minibufexpl.vim'
 
 let g:pymode_rope = 1
 let g:pymode_folding=0
