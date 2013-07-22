@@ -73,6 +73,27 @@ set autoindent
 
 set number
 
+" startup vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'sjl/gundo.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
+Bundle 'scrooloose/syntastic'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'robertkluin/vim-handy-highlights.git'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'bling/vim-airline'
+Bundle 'Lokaltog/powerline'
+Bundle 'sontek/rope-vim'
+Bundle 'ervandew/supertab'
+
 let g:pymode_rope = 1
 let g:pymode_folding=0
 let g:pymode_lint_ignore = "W391"
