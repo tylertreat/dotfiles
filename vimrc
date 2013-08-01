@@ -108,6 +108,9 @@ let g:pymode_breakpoint_key = '<leader>b'
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 
+" Tell Vim where to find ctags
+set tags=./tags,./TAGS,tags;~,TAGS;~
+
 " Task lists
 map <leader>td <Plug>TaskList
 map <leader>g :GundoToggle<CR>
