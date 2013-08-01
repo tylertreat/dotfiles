@@ -94,6 +94,8 @@ Bundle 'Lokaltog/powerline'
 Bundle 'sontek/rope-vim'
 Bundle 'ervandew/supertab'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'mileszs/ack.vim'
 
 let g:pymode_rope = 1
 let g:pymode_folding=0
@@ -139,6 +141,9 @@ map <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeWinSize = 22
 let NERDTreeMinimalUI = 1
+
+" Tagbar
+nmap <leader>t :TagbarToggle<CR>
 
 " Flake8 setup and shortcut
 let g:syntastic_check_on_open=1
