@@ -1,12 +1,11 @@
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
-alias sky="cd ~/WebFilings/bigsky && source ~/dev/wf/sky/bin/activate"
 
-JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-ANDROID_HOME=/Users/tylertreat/development/android-sdk
+export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+export ANDROID_HOME=/Users/Tyler/development/android-sdk
 
-PATH=$ANDROID_HOME/tools:$JAVA_HOME:/Users/tylertreat/Development/gsutil:$PATH
+export PATH=$ANDROID_HOME/tools:/Users/Tyler/development/appengine-java-sdk-1.7.4/bin:$JAVA_HOME:/usr/local/bin:$PATH
 
 source ~/.aliases
+source /usr/local/bin/virtualenvwrapper.sh
 
 function grepp () {
     echo "Greping for $@"
@@ -23,5 +22,4 @@ function grepjs () {
     grep -R --include="*.js" --include="*.coffee" "$@" * ;
 }
 
-source /Users/tylertreat/.pythonbrew/pythons/Python-2.7/bin/virtualenvwrapper.sh
 
