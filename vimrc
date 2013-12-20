@@ -121,7 +121,9 @@ filetype plugin indent on    " enable loading indent file for filetype
 let g:pyflakes_use_quickfix = 0
 
 " Add some nifty name use highlighting
-" autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+"autocmd CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+set hlsearch
+noremap ; :set hlsearch! hlsearch?<CR>
 
 " PEP8
 let g:pep8_map='<leader>8'
