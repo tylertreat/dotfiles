@@ -96,6 +96,7 @@ Bundle 'ervandew/supertab'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
+Bundle "lepture/vim-jinja" 
 
 let g:pymode_rope = 1
 let g:pymode_folding=0
