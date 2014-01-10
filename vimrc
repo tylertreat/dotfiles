@@ -56,6 +56,10 @@ set undodir=~/tmp/vim/undo//
 " Put swap files in a special place.
 set directory=~/tmp/vim/swap//
 
+" Yank to the clipboard
+map <C-c> "*y
+map <C-v> p
+
 set ruler
 set showcmd
 
