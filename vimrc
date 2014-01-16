@@ -58,7 +58,6 @@ set directory=~/tmp/vim/swap//
 
 " Yank to the clipboard
 map <C-c> "*y
-map <C-v> p
 
 set ruler
 set showcmd
