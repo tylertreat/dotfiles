@@ -94,17 +94,18 @@ Bundle 'robertkluin/vim-handy-highlights.git'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/powerline'
-Bundle 'sontek/rope-vim'
 Bundle 'ervandew/supertab'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
 Bundle "lepture/vim-jinja" 
 
+let g:pymode_options = 1
+let g:pymode_trim_whitespace = 1
 let g:pymode_rope = 1
 let g:pymode_folding=0
 let g:pymode_lint_ignore = "W391"
-let g:pymode_lint = 0
+let g:pymode_lint = 1
 let g:pymode_lint_cwindow = 0
 let g:pymode_run = 0
 let g:pymode_breakpoint = 1
@@ -137,10 +138,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-" Rope AutoImport and OrganizeImport
-nnoremap <C-S-o> :RopeOrganizeImports<CR>0<CR><CR>
-nnoremap <C-S-i> :RopeAutoImport<CR>
-
 " Close tip window when a selection is made
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
@@ -163,8 +160,8 @@ nnoremap zj :lnext<CR>zz
 nnoremap zk :lprev<CR>zz
 
 " Refactoring and go to definition
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+let g:pymode_rope_goto_definition_bind = '<leader>j'
+let g:pymode_rope_rename_bind = '<leader>r'
 
 " Searching
 nmap <leader>a <Esc>:Ack!
