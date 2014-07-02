@@ -79,28 +79,32 @@ set number
 " startup vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'sjl/gundo.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'klen/python-mode'
-Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'robertkluin/vim-handy-highlights.git'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'Lokaltog/powerline'
-Bundle 'ervandew/supertab'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle "lepture/vim-jinja" 
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'robertkluin/vim-handy-highlights.git'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/powerline'
+Plugin 'ervandew/supertab'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
+Plugin 'lepture/vim-jinja'
+Plugin 'pangloss/vim-javascript'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'fatih/vim-go'
 
 let g:pymode_options = 1
+let g:pymode_rope_complete_on_dot = 0
 let g:pymode_trim_whitespace = 1
 let g:pymode_rope = 1
 let g:pymode_folding=0
@@ -116,9 +120,15 @@ let g:pymode_syntax_all = 1
 " Tell Vim where to find ctags
 set tags=./tags,./TAGS,tags;~,TAGS;~
 
-" Task lists
-map <leader>td <Plug>TaskList
-map <leader>g :GundoToggle<CR>
+" Jedi vim
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
+
+" Ctrlp extensions
+let g:ctrlp_extensions = ['funky']
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" Narrow the list down with word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " Syntax highlighting and validation
 syntax on                    " syntax highlighing
