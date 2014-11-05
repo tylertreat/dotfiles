@@ -85,7 +85,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/syntastic'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'jnwhiteh/vim-golang'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -102,6 +101,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'pangloss/vim-javascript'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
+Plugin 'wookiehangover/jshint.vim'
 
 let g:pymode_options = 1
 let g:pymode_rope_complete_on_dot = 0
@@ -180,6 +180,12 @@ nmap <leader>a <Esc>:Ack!
 set background=dark
 set t_Co=256
 colorscheme desert256
+
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermfg=red
+highlight GitGutterChangeDelete ctermfg=yellow
 
 set cursorline
 set colorcolumn=80
