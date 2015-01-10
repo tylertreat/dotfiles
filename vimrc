@@ -102,6 +102,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
 Plugin 'wookiehangover/jshint.vim'
+Plugin 'wting/rust.vim'
 
 let g:pymode_options = 1
 let g:pymode_rope_complete_on_dot = 0
