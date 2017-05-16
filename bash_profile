@@ -1,4 +1,7 @@
-export PATH=/usr/local/bin:~/scripts:$PATH
+export GOPATH=~/Go
+export GOROOT=~/Development/go1.8.1
+
+export PATH=$GOPATH/bin:$GOROOT/bin:/usr/local/bin:~/scripts:$PATH
 
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
@@ -20,6 +23,3 @@ function grepjs () {
     echo "Greping for $@"
     grep -R --include="*.js" --include="*.coffee" "$@" * ;
 }
-
-eval "$(pyenv init -)"
-
