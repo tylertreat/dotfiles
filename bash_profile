@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:~/scripts:~/development/google-cloud-sdk/bin:$PATH
+export PATH=/usr/local/bin:~/scripts:$PATH
 
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments

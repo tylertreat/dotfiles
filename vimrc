@@ -1,7 +1,35 @@
-filetype on
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'robertkluin/vim-handy-highlights.git'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/powerline'
+Plugin 'ervandew/supertab'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'fatih/vim-go'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Add some stuff to the statusline
 set statusline=%t       "tail of the filename
@@ -75,34 +103,6 @@ set softtabstop=4
 set autoindent
 
 set number
-
-" startup vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Plugin 'gmarik/vundle'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'klen/python-mode'
-Plugin 'scrooloose/syntastic'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'robertkluin/vim-handy-highlights.git'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'Lokaltog/powerline'
-Plugin 'ervandew/supertab'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'mileszs/ack.vim'
-Plugin 'lepture/vim-jinja'
-Plugin 'pangloss/vim-javascript'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'fatih/vim-go'
-Plugin 'wookiehangover/jshint.vim'
-Plugin 'wting/rust.vim'
 
 let g:pymode_options = 1
 let g:pymode_rope_complete_on_dot = 0
@@ -210,5 +210,4 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
-
 
