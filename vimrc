@@ -72,6 +72,7 @@ set wildignore+=*.pyc
 set history=1000
 
 set mouse=a
+set ttymouse=sgr
 
 " Backup files
 set backup
@@ -161,6 +162,8 @@ let NERDTreeMinimalUI = 1
 
 " Tagbar
 nmap <leader>t :TagbarToggle<CR>
+
+let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
 
 " Flake8 setup and shortcut
 let g:syntastic_check_on_open=1
