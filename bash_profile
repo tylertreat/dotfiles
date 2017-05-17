@@ -9,6 +9,8 @@ export CPPFLAGS=-Qunused-arguments
 source ~/.aliases
 source /usr/local/bin/virtualenvwrapper.sh
 
+export EDITOR=nvim
+
 function grepp () {
     echo "Greping for $@"
     grep -R --include="*.py" "$@" * ;
