@@ -44,3 +44,4 @@ plugins=(git, tmux, brew, bower, mvn, pip)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
+source /usr/local/share/antigen/antigen.zsh
