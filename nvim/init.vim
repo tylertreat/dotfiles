@@ -163,6 +163,11 @@ let NERDTreeMinimalUI = 1
 nmap <leader>t :TagbarToggle<CR>
 
 let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_operators = 1
 
 " Flake8 setup and shortcut
 let g:syntastic_check_on_open=1
