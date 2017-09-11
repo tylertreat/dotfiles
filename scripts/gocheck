@@ -1,0 +1,4 @@
+go get -u honnef.co/go/tools/cmd/megacheck
+go get -u github.com/client9/misspell/cmd/misspell
+misspell -locale US . | grep -v "vendor/"
+megacheck -ignore "$(cat staticcheck.ignore)" $(go list ./... | grep -v "vendor/")
