@@ -10,18 +10,3 @@ source ~/.aliases
 source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=nvim
-
-function grepp () {
-    echo "Greping for $@"
-    grep -R --include="*.py" "$@" * ;
-}
-
-function grepj () {
-    echo "Greping for $@"
-    grep -R --include="*.java" "$@" * ;
-}
-
-function grepjs () {
-    echo "Greping for $@"
-    grep -R --include="*.js" --include="*.coffee" "$@" * ;
-}
